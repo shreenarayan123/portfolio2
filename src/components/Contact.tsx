@@ -24,8 +24,7 @@ export default function Contact() {
   const handleSubmit = async (e:any) => {
     e.preventDefault()
     setIsSubmitting(true)
-    // Here you would typically send the form data to your backend
-    // For this example, we'll just simulate a delay
+    // and handle the submission process. For this example, we'll just simulate a delay.
     await new Promise(resolve => setTimeout(resolve, 2000))
     setIsSubmitting(false)
     setSubmitStatus('success')
