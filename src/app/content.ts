@@ -1,5 +1,5 @@
-import Pulse from '../assets/Pulse.png'
-import Sociate from '../assets/Sociate.png'
+
+import Scribblr from '../assets/Scribblr.png'
 import Cashly from '../assets/cashly.png'
 import Emart from '../assets/emart.png'
 import StreamVid from '../assets/StreamVid.png'
@@ -19,16 +19,25 @@ import Facebook from '../assets/Facebook.png'
     //     code:"https://github.com/shreenarayan123/pulse/tree/main/pulse",
     // },
     // {
-    //     id:2,
+    //     id:1,
     //     image:Sociate,
     //     title:"Sociate",
     //     description: "The All-in-One Social Media Experience—Chat, Share, and Connect!",
     //     tags:["React.js", "express.js", "mongodb","redux", "firebase", "socket.io", "css", "bcrypt", "multer", "Full stack"],
-    //     link: "",
+    //     link: "https://scribblr-theta.vercel.app/",
     //     code:"https://github.com/shreenarayan123/Sociate",
     // },
-    {
+      {
         id:1,
+        image: Scribblr,
+        title:"Scribblr",
+        description: "Your Ultimate Blogging Hub—Create, Connect, and Curate with Profile Management, Author Following, Blog Publishing, Bookmarking, and More!",
+        tags:["React.js", "clouflare-workers", "postgreSQL", "tailwindCSS", "firebase", "prisma", "Full stack"],
+        link: "https://scribblr-theta.vercel.app/",
+        code:"https://github.com/shreenarayan123/Scribblr",
+    },
+    {
+        id:2,
         image: Cashly,
         title:"Cashly",
         description: "Experiance seamless digital payments",
@@ -37,7 +46,7 @@ import Facebook from '../assets/Facebook.png'
         code:"https://github.com/shreenarayan123/cashly"
     },
     {
-        id:2,
+        id:3,
         image: Emart,
         title:"Emart",
         description: "Your ultimate online shopping destination! Sign up, browse endless categories, filter like a pro, and rock a wishlist with easy checkout. ",
@@ -46,7 +55,7 @@ import Facebook from '../assets/Facebook.png'
         code:"https://github.com/shreenarayan123/emart"
     },
     {
-        id:3,
+        id:4,
         image: StreamVid,
         title:"StreamVid",
         description: "Your next-gen video hub! Browse, filter by category and likes, and enjoy a seamless viewing experience with our signup-free access!",
@@ -56,7 +65,7 @@ import Facebook from '../assets/Facebook.png'
     },
 
     {
-        id:4,
+        id:5,
         image: Ecommerce,
         title:"E-commerce",
         description: "Modern E-commerce platform landing page",
@@ -65,7 +74,7 @@ import Facebook from '../assets/Facebook.png'
         code:"https://github.com/shreenarayan123/E-commerce"
     },
     {
-        id:5,
+        id:6,
         image: Facebook,
         title:"Pulse",
         description: "A Facebook-like social media app responsive lading page with theme and font customization",

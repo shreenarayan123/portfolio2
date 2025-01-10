@@ -6,7 +6,6 @@ import Image, { StaticImageData } from "next/image";
 import { projects } from "@/app/content";
 import { Github, Globe } from "lucide-react";
 import Link from "next/link";
-import { PinContainer } from "./ui/3d-pin";
 type Project = {
   id: number;
   title: string;
