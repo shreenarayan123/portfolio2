@@ -5,19 +5,20 @@ import Emart from '../assets/emart.png'
 import StreamVid from '../assets/StreamVid.png'
 import Ecommerce from '../assets/Ecommerce.png'
 import Facebook from '../assets/Facebook.png'
+import Pulse from '../assets/Pulse.png'
 
 
  export const projects = [
 
-    // {
-    //     id:1,
-    //     image:Pulse,
-    //     title:"Pulse",
-    //     description: "A task management system..things implement till now ..Frontend, JWT auth",
-    //     tags:["Next.js", "Shadcn", "Mongodb","Context API", "JWT", "Zod", "Tailwindcss", "bcrypt", "Full stack"],
-    //     link: "https://pulse-rouge.vercel.app/",
-    //     code:"https://github.com/shreenarayan123/pulse/tree/main/pulse",
-    // },
+    {
+        id:1,
+        image:Pulse,
+        title:"Pulse",
+        description: "A task management system..things implement till now ..Frontend, JWT auth",
+        tags:["Next.js", "Shadcn", "Mongodb","Context API", "JWT", "Zod", "Tailwindcss", "bcrypt", "Full stack"],
+        link: "https://pulse-rouge.vercel.app/",
+        code:"https://github.com/shreenarayan123/pulse/tree/main/pulse",
+    },
     // {
     //     id:1,
     //     image:Sociate,
@@ -28,7 +29,7 @@ import Facebook from '../assets/Facebook.png'
     //     code:"https://github.com/shreenarayan123/Sociate",
     // },
       {
-        id:1,
+        id:2,
         image: Scribblr,
         title:"Scribblr",
         description: "Your Ultimate Blogging Hub—Create, Connect, and Curate with Profile Management, Author Following, Blog Publishing, Bookmarking, and More!",
@@ -37,7 +38,7 @@ import Facebook from '../assets/Facebook.png'
         code:"https://github.com/shreenarayan123/Scribblr",
     },
     {
-        id:2,
+        id:3,
         image: Cashly,
         title:"Cashly",
         description: "Experiance seamless digital payments",
@@ -46,7 +47,7 @@ import Facebook from '../assets/Facebook.png'
         code:"https://github.com/shreenarayan123/cashly"
     },
     {
-        id:3,
+        id:4,
         image: Emart,
         title:"Emart",
         description: "Your ultimate online shopping destination! Sign up, browse endless categories, filter like a pro, and rock a wishlist with easy checkout. ",
@@ -55,7 +56,7 @@ import Facebook from '../assets/Facebook.png'
         code:"https://github.com/shreenarayan123/emart"
     },
     {
-        id:4,
+        id:5,
         image: StreamVid,
         title:"StreamVid",
         description: "Your next-gen video hub! Browse, filter by category and likes, and enjoy a seamless viewing experience with our signup-free access!",
@@ -65,7 +66,7 @@ import Facebook from '../assets/Facebook.png'
     },
 
     {
-        id:5,
+        id:6,
         image: Ecommerce,
         title:"E-commerce",
         description: "Modern E-commerce platform landing page",
@@ -74,9 +75,9 @@ import Facebook from '../assets/Facebook.png'
         code:"https://github.com/shreenarayan123/E-commerce"
     },
     {
-        id:6,
+        id:7,
         image: Facebook,
-        title:"Pulse",
+        title:"Sociate",
         description: "A Facebook-like social media app responsive lading page with theme and font customization",
         tags:["html" ,"css", "javascript", "Front end"],
         link: "https://shreenarayan123.github.io/Facebook-clone/",
