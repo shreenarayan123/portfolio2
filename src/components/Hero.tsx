@@ -4,19 +4,13 @@ import React from "react";
 import { Modal, ModalTrigger } from "./ui/animated-modal";
 import Link from "next/link";
 import Image from "next/image";
+import { AuroraText } from "@/components/magicui/aurora-text";
+import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text";
+import { ShimmerButton } from "./magicui/shimmer-button";
 
 export default function Hero() {
   return (
-    <motion.div
-      initial={{ opacity: 0.0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{
-        delay: 0.3,
-        duration: 0.8,
-        ease: "easeInOut",
-      }}
-      className="relative flex flex-col gap-4 items-center justify-center px-4"
-    >
+    <div className="relative flex flex-col gap-4 items-center justify-center px-4">
       <div id="about" className="flex items-center py-20 h-full gap-10">
         <div className="flex flex-col items-center justify-center gap-5">
           <span className="md:text-6xl text-4xl items-center flex flex-col md:items-start gap-2 font-inter font-bold text-center text-gray-900 dark:text-white">
@@ -35,7 +29,7 @@ export default function Hero() {
                 👋
               </motion.span>
             </span>
-            <span>Shreenarayan </span>
+            <AuroraText speed={2}>Shreenarayan </AuroraText>
           </span>
           <span className="text-xl">A FullStack Developer from India</span>
           <Link href="#projects">
@@ -48,7 +42,7 @@ export default function Hero() {
                   Let's go ! 🚀
                 </div>
               </ModalTrigger>
-            </Modal>
+            </Modal>{" "}
           </Link>
         </div>
         <div className="[perspective:1000px] [transform-style:preserve-3d] flex items-center justify-center">
@@ -61,6 +55,6 @@ export default function Hero() {
           />
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

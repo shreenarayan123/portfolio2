@@ -19,7 +19,7 @@ export default function Projects() {
     <section id="projects" className="py-10 md:px-10 bg-white dark:bg-gray-800">
       <div className="md:container md:mx-auto  px-4">
         <h2 className="md:text-5xl text-3xl  font-cal-sans-regular font-semibold mb-8 text-center text-black dark:text-white tracking-wide">
-          Check out my latest work
+           Check out my latest work
         </h2>
         <div className="md:grid w-full flex flex-col  md:grid-cols-2 lg:grid-cols-2 gap-10">
           {projects.map((project, index) => (
