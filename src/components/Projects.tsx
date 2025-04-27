@@ -18,7 +18,7 @@ export default function Projects() {
   return (
     <section id="projects" className="py-10 px-10 bg-white dark:bg-gray-800">
       <div className="container mx-auto px-4">
-        <h2 className="text-5xl font-cal-sans-regular font-semibold mb-8 text-center text-black dark:text-white tracking-wide">
+        <h2 className="md:text-5xl text-3xl  font-cal-sans-regular font-semibold mb-8 text-center text-black dark:text-white tracking-wide">
           Check out my latest work
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
