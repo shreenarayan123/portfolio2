@@ -19,7 +19,7 @@ export default function Hero() {
     >
       <div id="about" className="flex items-center py-20 h-full gap-10">
         <div className="flex flex-col items-center justify-center gap-5">
-          <span className="text-6xl  flex flex-col items-start gap-2 font-inter font-bold text-center text-gray-900 dark:text-white">
+          <span className="md:text-6xl text-4xl items-center flex flex-col md:items-start gap-2 font-inter font-bold text-center text-gray-900 dark:text-white">
             <span className="flex items-center gap-2">
               {" "}
               Hi, I'am
