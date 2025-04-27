@@ -33,7 +33,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="pb-10 dark:bg-gray-800 w-[80%]">
+    <section id="contact" className="pb-10 dark:bg-gray-800 md:w-[80%]">
         <h2 className="text-4xl font-bold mb-8 text-center text-black font-cal-sans-regular tracking-wide dark:text-white">Get In Touch</h2>
         <div className="max-w-3xl mx-auto bg-white dark:bg-gray-700 rounded-lg shadow-2xl p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
