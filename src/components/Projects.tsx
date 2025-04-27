@@ -16,12 +16,12 @@ type Project = {
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-10 px-10 bg-white dark:bg-gray-800">
-      <div className="container mx-auto px-4">
+    <section id="projects" className="py-10 md:px-10 bg-white dark:bg-gray-800">
+      <div className="md:container md:mx-auto  px-4">
         <h2 className="md:text-5xl text-3xl  font-cal-sans-regular font-semibold mb-8 text-center text-black dark:text-white tracking-wide">
           Check out my latest work
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+        <div className="md:grid w-full flex flex-col  md:grid-cols-2 lg:grid-cols-2 gap-10">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -29,9 +29,9 @@ export default function Projects() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="bg-white dark:bg-gray-700  rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="relative h-48">
+              <div className="relative md:h-48">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -45,7 +45,7 @@ export default function Projects() {
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                <p className="text-gray-600 dark:text-gray-300 mb-4 ">
                   {project.description}
                 </p>
                 <div className=" md:flex-wrap gap-2 mb-4 hidden md:flex">
