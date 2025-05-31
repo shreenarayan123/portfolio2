@@ -5,7 +5,7 @@ import { useEffect } from "react";
     useEffect(() => {
       // Create iframe element
       const iframe = document.createElement("iframe");
-      iframe.src = "http://vendai.live/chatbot?id=2e4d4748-a905-43f2-9595-76c4759df375";
+      iframe.src = "https://vendai.live/chatbot?id=2e4d4748-a905-43f2-9595-76c4759df375";
       iframe.classList.add("chat-frame");
   
       // Add the iframe to the DOM
