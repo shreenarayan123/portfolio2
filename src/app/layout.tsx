@@ -1,10 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
-import Navigation from '@/components/Navigation'
-import Hero from '@/components/Hero'
-import ChatBotIframe from '@/components/Chatbot'
-
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,7 +25,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           
           <main>{children}</main>
-          <ChatBotIframe/>
+          {/* <ChatBotIframe/> */}
         </ThemeProvider>
       </body>
     </html>
