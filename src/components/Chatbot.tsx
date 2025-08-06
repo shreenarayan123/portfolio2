@@ -3,15 +3,14 @@ import { useEffect } from "react";
   
   const ChatBotIframe = () => {
     useEffect(() => {
-      // Create iframe element
       const iframe = document.createElement("iframe");
-      iframe.src = "https://vendai.live/chatbot?id=2e4d4748-a905-43f2-9595-76c4759df375";
+      iframe.src = "http://localhost:3000/chatbot?id=1be80cb1-33f2-48e8-bb69-8a2d5433b611";
       iframe.classList.add("chat-frame");
   
-      // Add the iframe to the DOM
+     
       document.body.appendChild(iframe);
   
-      // Create and apply styles
+     
       const style = document.createElement("style");
       style.textContent = `
      .chat-frame {
@@ -23,16 +22,27 @@ import { useEffect } from "react";
    `;
       document.head.append(style);
   
-      // Set up message event listener
+      
       const handleMessage = (e: MessageEvent) => {
         try {
-          const dimensions = JSON.parse(e.data);
+          // Check if e.data is already an object or needs parsing
+          let dimensions;
+          if (typeof e.data === 'string') {
+            dimensions = JSON.parse(e.data);
+          } else if (typeof e.data === 'object' && e.data !== null) {
+            dimensions = e.data;
+          } else {
+            console.log("Received non-object data:", e.data);
+            return;
+          }
+          
           if (iframe && dimensions.width && dimensions.height) {
             iframe.width = dimensions.width;
             iframe.height = dimensions.height;
           }
         } catch (error) {
-          console.log("Error processing iframe message:", error);
+          console.error("Error processing iframe message:", error);
+          console.log("Raw message data:", e.data);
         }
       };
   

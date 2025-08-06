@@ -2,6 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Analytics } from '@vercel/analytics/next'
+import ChatBotIframe from '@/components/Chatbot'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,7 +28,7 @@ export default function RootLayout({
           
           <main>{children}</main>
           <Analytics/>
-          {/* <ChatBotIframe/> */}
+          <ChatBotIframe/>
         </ThemeProvider>
       </body>
     </html>
