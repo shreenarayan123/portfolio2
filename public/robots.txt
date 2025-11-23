@@ -1,0 +1,21 @@
+# Robots.txt for Shreenarayan Jaiswal Portfolio
+# https://shreenarayan.vercel.app
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://shreenarayan.vercel.app/sitemap.xml
+
+# Allow all search engine crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Crawl delay to be respectful
+Crawl-delay: 1
