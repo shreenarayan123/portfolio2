@@ -29,6 +29,16 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## Contact Form Email
+
+The contact form sends messages through a Next.js API route using Resend. Add this environment variable in `.env.local`:
+
+```bash
+RESEND_API_KEY=your-resend-api-key
+```
+
+Messages will be delivered to `narayanjaiswal030@gmail.com`.
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.

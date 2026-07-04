@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Twitter } from 'lucide-react'
-import { BackgroundBeamsWithCollision } from './ui/background-beams-with-collision'
 
 export default function Contact() {
   const [formState, setFormState] = useState({
@@ -12,24 +11,44 @@ export default function Contact() {
     message: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<string | null>(null)
+  const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null)
+  const [statusMessage, setStatusMessage] = useState('')
 
-  const handleChange = (e:any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormState({
       ...formState,
       [e.target.name]: e.target.value
     })
   }
 
-  const handleSubmit = async (e:any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
-    // and handle the submission process. For this example, we'll just simulate a delay.
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    setIsSubmitting(false)
-    setSubmitStatus('success')
-    // Reset form after successful submission
-    setFormState({ name: '', email: '', message: '' })
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formState)
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message')
+      }
+
+      setSubmitStatus('success')
+      setStatusMessage('Thank you for your message! I\'ll get back to you soon.')
+      setFormState({ name: '', email: '', message: '' })
+    } catch (error) {
+      setSubmitStatus('error')
+      setStatusMessage(error instanceof Error ? error.message : 'Something went wrong. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -83,13 +102,13 @@ export default function Contact() {
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </motion.button>
           </form>
-          {submitStatus === 'success' && (
+          {submitStatus && (
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              className="mt-4 p-4 bg-green-100 text-green-700 rounded-md"
+              className={`mt-4 p-4 rounded-md ${submitStatus === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}
             >
-              Thank you for your message! I'll get back to you soon.
+              {statusMessage}
             </motion.div>
           )}
           <div className="mt-8 flex justify-center space-x-6">

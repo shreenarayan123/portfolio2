@@ -1,12 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
 import React from "react";
-import { Modal, ModalTrigger } from "./ui/animated-modal";
 import Link from "next/link";
 import Image from "next/image";
 import { AuroraText } from "@/components/magicui/aurora-text";
-import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text";
-import { ShimmerButton } from "./magicui/shimmer-button";
 
 export default function Hero() {
   return (
@@ -32,17 +29,16 @@ export default function Hero() {
             <AuroraText speed={2}>Shreenarayan </AuroraText>
           </span>
           <span className="text-xl">A FullStack Developer from India</span>
-          <Link href="#projects">
-            <Modal>
-              <ModalTrigger className="bg-black dark:bg-white dark:text-black text-white flex justify-center group/modal-btn">
-                <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
-                  See my projects
-                </span>
-                <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
-                  Let's go ! 🚀
-                </div>
-              </ModalTrigger>
-            </Modal>{" "}
+          <Link
+            href="/projects"
+            className="group relative inline-flex h-9 items-center justify-center overflow-hidden rounded-full bg-black px-6 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl dark:bg-white dark:text-black"
+          >
+            <span className="transition duration-300 group-hover:translate-y-6">
+              Things i built so far 
+            </span>
+            <span className="absolute translate-y-6 transition duration-300 group-hover:translate-y-0">
+              View all projects
+            </span>
           </Link>
         </div>
         <div className="[perspective:1000px] [transform-style:preserve-3d] flex items-center justify-center">
