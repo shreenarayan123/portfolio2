@@ -15,16 +15,13 @@ export default function ProjectsPage() {
         </Link>
 
         <div className="mt-10 flex flex-col gap-4 border-b border-black/10 pb-8 dark:border-white/10">
-          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-black/60 dark:text-white/60">
-            Things i build so far :
-          </p>
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div className="max-w-3xl space-y-3">
               <h1 className="font-cal-sans-regular text-4xl font-semibold sm:text-5xl lg:text-6xl">
-                Selected projects and live builds
+                Things i built so far 
               </h1>
               <p className="text-base leading-7 text-black/70 dark:text-white/70 sm:text-lg">
-                A compact list of products, experiments, and shipped work with the stack and link for each one.
+                A compact list of products, experiments, and shipped work .
               </p>
             </div>
             <div className="rounded-2xl border border-black/10 bg-white/70 px-5 py-4 text-sm shadow-sm dark:border-white/10 dark:bg-white/5">
@@ -68,10 +65,6 @@ export default function ProjectsPage() {
                         </span>
                       ))}
                     </div>
-
-                    <p className="break-all text-sm text-black/55 dark:text-white/55">
-                      {project.url}
-                    </p>
                   </div>
 
                   <Link

@@ -53,46 +53,10 @@ export const buildsSoFar = [
         url: "https://emart-k5vl.vercel.app",
     },
     {
-        name: "StreamVid",
-        description: "Next-gen video hub — browse and filter by category and likes",
-        stack: "React · Tailwind CSS · RapidAPI",
-        url: "https://youtube-livid-beta.vercel.app/",
-    },
-    {
         name: "Resume Analyzer",
         description: "AI-powered resume scoring and job match tool",
         stack: "Next.js · OpenAI · Tailwind CSS",
         url: "https://qualifypro-dream-job-builder.lovable.app",
-    },
-    {
-        name: "Admin Dashboard",
-        description: "Frontend admin panel for internal tooling",
-        stack: "React · TypeScript · Tailwind CSS",
-        url: "https://frontend-task-gold-ten.vercel.app",
-    },
-    {
-        name: "Pizza Hub",
-        description: "Pizza business landing page with 3D visuals",
-        stack: "React · Tailwind CSS · Three.js",
-        url: "https://pizza-hub-amber.vercel.app",
-    },
-    {
-        name: "Ciaan Cyber Tech",
-        description: "LinkedIn-style professional networking platform",
-        stack: "React · Node.js · PostgreSQL",
-        url: "https://ciaan-cyber-tech.vercel.app",
-    },
-    {
-        name: "E-commerce",
-        description: "Modern e-commerce platform landing page",
-        stack: "HTML · CSS · JavaScript · Bootstrap",
-        url: "https://shreenarayan123.github.io/E-commerce/",
-    },
-    {
-        name: "Facebook Clone",
-        description: "Facebook-like responsive app with theme and font customization",
-        stack: "HTML · CSS · JavaScript",
-        url: "https://shreenarayan123.github.io/Facebook-clone/",
     },
     {
         name: "Doable",
@@ -167,11 +131,47 @@ export const buildsSoFar = [
         url: "https://github.com/shreenarayan123/equal-collective",
     },
     {
+        name: "StreamVid",
+        description: "Next-gen video hub — browse and filter by category and likes",
+        stack: "React · Tailwind CSS · RapidAPI",
+        url: "https://youtube-livid-beta.vercel.app/",
+    },
+    {
+        name: "Admin Dashboard",
+        description: "Frontend admin panel for internal tooling",
+        stack: "React · TypeScript · Tailwind CSS",
+        url: "https://frontend-task-gold-ten.vercel.app",
+    },
+    {
+        name: "Pizza Hub",
+        description: "Pizza business landing page with 3D visuals",
+        stack: "React · Tailwind CSS · Three.js",
+        url: "https://pizza-hub-amber.vercel.app",
+    },
+    {
         name: "taskflow",
         description: "Task and workflow management tool",
         stack: "Next.js · TypeScript",
         url: "https://github.com/shreenarayan123/taskflow",
     },
+    {
+        name: "Ciaan Cyber Tech",
+        description: "LinkedIn-style professional networking platform",
+        stack: "React · Node.js · PostgreSQL",
+        url: "https://ciaan-cyber-tech.vercel.app",
+    },
+    {
+        name: "E-commerce",
+        description: "Modern e-commerce platform landing page",
+        stack: "HTML · CSS · JavaScript · Bootstrap",
+        url: "https://shreenarayan123.github.io/E-commerce/",
+    },
+    {
+        name: "Facebook Clone",
+        description: "Facebook-like responsive app with theme and font customization",
+        stack: "HTML · CSS · JavaScript",
+        url: "https://shreenarayan123.github.io/Facebook-clone/",
+    }
 ]
 
 export const projects = [
