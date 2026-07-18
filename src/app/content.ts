@@ -140,7 +140,7 @@ export const buildsSoFar = [
         name: "Admin Dashboard",
         description: "Frontend admin panel for internal tooling",
         stack: "React · TypeScript · Tailwind CSS",
-        url: "https://frontend-task-gold-ten.vercel.app",
+        url: "https://frontend-task-gold-ten.vercel.app", 
     },
     {
         name: "Pizza Hub",

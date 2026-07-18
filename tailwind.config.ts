@@ -29,6 +29,10 @@ const config = {
   			'cal-sans-regular': [
   				'Cal Sans',
   				'sans-serif'
+  			],
+  			'serif-accent': [
+  				'Instrument Serif',
+  				'serif'
   			]
   		},
   		colors: {
@@ -94,11 +98,45 @@ const config = {
   				to: {
   					height: '0'
   				}
+  			},
+  			aurora: {
+  				'0%': {
+  					backgroundPosition: '0% 50%',
+  					transform: 'rotate(-5deg) scale(0.9)'
+  				},
+  				'25%': {
+  					backgroundPosition: '50% 100%',
+  					transform: 'rotate(5deg) scale(1.1)'
+  				},
+  				'50%': {
+  					backgroundPosition: '100% 50%',
+  					transform: 'rotate(-3deg) scale(0.95)'
+  				},
+  				'75%': {
+  					backgroundPosition: '50% 0%',
+  					transform: 'rotate(3deg) scale(1.05)'
+  				},
+  				'100%': {
+  					backgroundPosition: '0% 50%',
+  					transform: 'rotate(-5deg) scale(0.9)'
+  				}
+  			},
+  			'pulse-dot': {
+  				'0%, 100%': {
+  					opacity: '1',
+  					transform: 'scale(1)'
+  				},
+  				'50%': {
+  					opacity: '0.4',
+  					transform: 'scale(0.85)'
+  				}
   			}
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
+  			'accordion-up': 'accordion-up 0.2s ease-out',
+  			aurora: 'aurora 8s ease-in-out infinite alternate',
+  			'pulse-dot': 'pulse-dot 2s ease-in-out infinite'
   		}
   	}
   },

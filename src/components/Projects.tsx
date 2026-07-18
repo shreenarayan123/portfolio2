@@ -1,78 +1,125 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { projects } from "@/app/content";
-import { Github, Globe } from "lucide-react";
+import { buildsSoFar, projects } from "@/app/content";
+import { ArrowRight, FolderGit2, Github, Globe } from "lucide-react";
 import Link from "next/link";
+
+const FEATURED_COUNT = 6;
+
 export default function Projects() {
   return (
-    <section id="projects" className="py-10 md:px-10 bg-white dark:bg-gray-800">
-      <div className="md:container md:mx-auto  px-4">
-        <h2 className="md:text-5xl text-3xl  font-cal-sans-regular font-semibold mb-8 text-center text-black dark:text-white tracking-wide">
-          Check out my latest work
-        </h2>
-        <div className="md:grid w-full flex flex-col  md:grid-cols-2 lg:grid-cols-2 gap-10">
-          {projects.map((project, index) => (
+    <section id="projects" className="relative w-full py-28">
+      <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-4">
+        <motion.span
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="section-label"
+        >
+          <FolderGit2 size={13} />
+          Projects
+        </motion.span>
+        <motion.h2
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-center text-4xl font-bold tracking-tight text-white md:text-5xl"
+        >
+          Things I&apos;ve{" "}
+          <span className="font-serif-accent italic text-gradient">built</span>
+        </motion.h2>
+
+        <div className="mt-14 grid w-full grid-cols-1 gap-6 md:grid-cols-2">
+          {projects.slice(0, FEATURED_COUNT).map((project, index) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -10 }}
-              className="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{
+                duration: 0.7,
+                ease: [0.16, 1, 0.3, 1],
+                delay: (index % 2) * 0.12,
+              }}
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition-all duration-500 hover:-translate-y-1.5 hover:border-white/25 hover:shadow-[0_20px_60px_rgba(0,0,0,0.5)]"
             >
-              <div className="relative md:h-48">
+              {/* hover glow */}
+              <div className="pointer-events-none absolute -top-24 left-1/2 h-48 w-72 -translate-x-1/2 rounded-full bg-violet-500/0 blur-3xl transition-colors duration-500 group-hover:bg-violet-500/20" />
+
+              <div className="relative h-52 overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}
-                  objectFit="cover"
-                  className="transition-opacity duration-300"
+                  fill
+                  className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
                   placeholder="blur"
-                  blurDataURL="/placeholder.svg"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent" />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+
+              <div className="relative p-6">
+                <h3 className="text-xl font-semibold text-white">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4 ">
+                <p className="mt-2 text-sm leading-6 text-zinc-400">
                   {project.description}
                 </p>
-                <div className=" md:flex-wrap gap-2 mb-4 hidden md:flex">
-                  {project.tags.map((tag) => (
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {project.tags.slice(0, 5).map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 bg-gray-200 dark:bg-gray-600 text-black font-semibold dark:text-gray-300 rounded-full text-sm"
+                      className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs font-medium text-zinc-300"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <div className="flex items-center justify-between w-full">
-                  <div className=" flex items-start gap-3">
-                    {project.link && (
-                      <Link href={project.link} target="_blank">
-                        <span className="px-3 font-semibold py-1 flex gap-2 items-center bg-black dark:bg-gray-600 text-white dark:text-gray-300 rounded-full text-sm">
-                          <Globe size={15} /> Live
-                        </span>
-                      </Link>
-                    )}
-                    <Link href={project.code} target="_blank">
-                      <span className="px-3 font-semibold py-1 flex gap-2 items-center bg-black dark:bg-gray-600 text-white dark:text-gray-300 rounded-full text-sm">
-                        <Github size={15} /> Source
-                      </span>
+                <div className="mt-5 flex items-center gap-3">
+                  {project.link && (
+                    <Link
+                      href={project.link}
+                      target="_blank"
+                      className="inline-flex items-center gap-1.5 rounded-full bg-white px-4 py-1.5 text-xs font-semibold text-zinc-950 transition-transform duration-300 hover:-translate-y-0.5"
+                    >
+                      <Globe size={13} /> Live
                     </Link>
-                  </div>
-                  {/* {project.id === 1 && (
-                    <p className="font-bold text-xl bg-gradient-to-r from-[rgba(2,0,36,1)] via-[rgba(9,9,121,1)] to-[rgba(0,212,255,1)] bg-clip-text text-transparent">
-                      Coming soon
-                    </p>
-                  )} */}
+                  )}
+                  {project.code && (
+                    <Link
+                      href={project.code}
+                      target="_blank"
+                      className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10"
+                    >
+                      <Github size={13} /> Source
+                    </Link>
+                  )}
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-12"
+        >
+          <Link
+            href="/projects"
+            className="group inline-flex h-11 items-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 text-sm font-semibold text-white backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/10"
+          >
+            All {buildsSoFar.length} projects
+            <ArrowRight
+              size={16}
+              className="transition-transform duration-300 group-hover:translate-x-1"
+            />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

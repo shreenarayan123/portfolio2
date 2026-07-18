@@ -1,5 +1,5 @@
-
 import Hero from '@/components/Hero'
+import Experience from '@/components/Experience'
 import Projects from '@/components/Projects'
 import Skills from '@/components/Skills'
 import Contact from '@/components/Contact'
@@ -7,14 +7,13 @@ import Navigation from '@/components/Navigation'
 
 export default function Home() {
   return (
-    <div className='flex flex-col items-center justify-center py-10 w-full'>
+    <div className="relative flex w-full flex-col items-center overflow-x-clip">
       <Navigation />
-      <div className='flex flex-col items-center w-[90%] md:w-2/3'>
       <Hero />
+      <Experience />
       <Projects />
       <Skills />
       <Contact />
-      </div>
     </div>
-    )
+  )
 }
