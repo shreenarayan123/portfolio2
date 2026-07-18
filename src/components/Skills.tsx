@@ -93,10 +93,10 @@ export default function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-center text-4xl font-bold tracking-tight text-white md:text-5xl"
+          className="text-center text-4xl font-semibold tracking-tight text-white md:text-5xl"
         >
           Tools I{" "}
-          <span className="font-serif-accent italic text-gradient">
+          <span className="font-serif-accent font-normal italic text-gradient">
             work with
           </span>
         </motion.h2>

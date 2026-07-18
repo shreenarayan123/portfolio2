@@ -23,15 +23,15 @@ const config = {
   	extend: {
   		fontFamily: {
   			inter: [
-  				'Inter Tight',
+  				'var(--font-poppins)',
   				'sans-serif'
   			],
-  			'cal-sans-regular': [
-  				'Cal Sans',
+  			poppins: [
+  				'var(--font-poppins)',
   				'sans-serif'
   			],
   			'serif-accent': [
-  				'Instrument Serif',
+  				'var(--font-playfair)',
   				'serif'
   			]
   		},

@@ -17,9 +17,9 @@ export default function ProjectsPage() {
         <div className="mt-10 flex flex-col gap-4 border-b border-white/10 pb-8">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div className="max-w-3xl space-y-3">
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+              <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
                 Things I&apos;ve{" "}
-                <span className="font-serif-accent italic text-gradient">
+                <span className="font-serif-accent font-normal italic text-gradient">
                   built so far
                 </span>
               </h1>
@@ -29,7 +29,7 @@ export default function ProjectsPage() {
             </div>
             <div className="glass-card px-5 py-4 text-sm">
               <div className="text-zinc-500">Total projects</div>
-              <div className="mt-1 text-3xl font-bold text-gradient">
+              <div className="mt-1 text-3xl font-semibold text-gradient">
                 {buildsSoFar.length}
               </div>
             </div>
@@ -51,7 +51,7 @@ export default function ProjectsPage() {
                       <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-zinc-950">
                         {String(index + 1).padStart(2, "0")}
                       </span>
-                      <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+                      <h2 className="text-2xl font-medium tracking-tight sm:text-3xl">
                         {project.name}
                       </h2>
                     </div>

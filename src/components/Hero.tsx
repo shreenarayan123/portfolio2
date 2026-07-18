@@ -71,17 +71,9 @@ export default function Hero() {
 
           <motion.h1
             variants={item}
-            className="text-5xl font-bold leading-[1.05] tracking-tight text-white md:text-7xl"
+            className="text-5xl font-semibold leading-[1.05] tracking-tight text-white md:text-7xl"
           >
             Hi, I&apos;m{" "}
-            <motion.span
-              className="inline-block"
-              initial={{ rotate: 0 }}
-              animate={{ rotate: [0, 18, -8, 18, 0] }}
-              transition={{ duration: 1.8, delay: 1, repeat: Infinity, repeatDelay: 3 }}
-            >
-              👋
-            </motion.span>
             <br />
             <span className="text-gradient">Shreenarayan</span>
           </motion.h1>
@@ -91,7 +83,7 @@ export default function Hero() {
             className="text-xl text-zinc-400 md:text-2xl"
           >
             Full-stack engineer who{" "}
-            <span className="font-serif-accent text-2xl italic text-zinc-200 md:text-3xl">
+            <span className="font-serif-accent text-2xl italic text-white md:text-3xl">
               ships end-to-end
             </span>
             <br className="hidden md:block" /> — product, backend, and the
@@ -139,12 +131,7 @@ export default function Hero() {
         </div>
 
         <motion.div variants={item} className="relative hidden md:block">
-          <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-violet-500/40 via-fuchsia-500/20 to-sky-500/40 blur-xl" />
-          <motion.div
-            whileHover={{ rotate: 1.5, scale: 1.02 }}
-            transition={{ type: "spring", stiffness: 200, damping: 18 }}
-            className="relative overflow-hidden rounded-3xl border border-white/10"
-          >
+          <div className="relative overflow-hidden rounded-[1.8rem] border border-white/10">
             <Image
               src="/images/me2.png"
               alt="Shreenarayan"
@@ -153,7 +140,7 @@ export default function Hero() {
               className="relative z-10"
               priority
             />
-          </motion.div>
+          </div>
         </motion.div>
       </motion.div>
 
@@ -170,7 +157,7 @@ export default function Hero() {
             key={stat.label}
             className="flex flex-col items-center gap-1 bg-zinc-950/90 px-6 py-8 transition-colors duration-300 hover:bg-zinc-900/90"
           >
-            <span className="text-4xl font-bold tracking-tight text-white md:text-5xl">
+            <span className="text-4xl font-semibold tracking-tight text-white md:text-5xl">
               <Counter to={stat.value} suffix={stat.suffix} />
             </span>
             <span className="text-sm text-zinc-500">{stat.label}</span>

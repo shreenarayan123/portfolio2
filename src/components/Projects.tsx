@@ -26,10 +26,10 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-center text-4xl font-bold tracking-tight text-white md:text-5xl"
+          className="text-center text-4xl font-semibold tracking-tight text-white md:text-5xl"
         >
           Things I&apos;ve{" "}
-          <span className="font-serif-accent italic text-gradient">built</span>
+          <span className="font-serif-accent font-normal italic text-gradient">built</span>
         </motion.h2>
 
         <div className="mt-14 grid w-full grid-cols-1 gap-6 md:grid-cols-2">
@@ -61,7 +61,7 @@ export default function Projects() {
               </div>
 
               <div className="relative p-6">
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="text-xl font-medium text-white">
                   {project.title}
                 </h3>
                 <p className="mt-2 text-sm leading-6 text-zinc-400">
