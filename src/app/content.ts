@@ -181,7 +181,7 @@ export const projects = [
         title: "Vend AI",
         description: "An AI-powered Customer Support Chatbot for Your Business",
         tags: ["Next.js", "Stripe", "Pusher", "Context API", "Clerk", "Zod", "Azure", "Nginx"],
-        link: "https://vendai.live/",
+        link: "https://vendai-sigma.vercel.app/",
         code: "https://github.com/shreenarayan123/Vend-AI",
     },
     {

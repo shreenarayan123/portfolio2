@@ -20,7 +20,6 @@ const EXPERIENCES = [
       "Took over the frontend when the frontend engineer left — integrated all APIs and now own the business platform end-to-end.",
       "Built an internal inventory manager to track and audit company resources — applications, servers, and infrastructure.",
       "Built network discovery tooling: NetFlow mapping, IP discovery, and port scanning powered by Nmap.",
-      "Currently driving the blockchain business platform and change-management modules.",
     ],
     stack: ["Node.js", "TypeScript", "React", "PostgreSQL", "Prisma", "Nmap", "AWS"],
   },
@@ -41,7 +40,6 @@ const EXPERIENCES = [
       "Owned AWS infrastructure — Lambda functions, EC2 (debugging + releases for dev and prod), SNS topics & subscriptions, SES, IAM, and cron jobs.",
       "Ran 7 data releases onboarding new customers, and built MongoDB aggregation build-scripts for data-engineering workflows.",
       "Took end-to-end ownership of the membership feature across the salon app and consumer React Native app — UI, APIs, and test cases — work typically given to engineers with a year in the company.",
-      "Onboarded new joiners to the team and codebase.",
     ],
     stack: [
       "Next.js",
