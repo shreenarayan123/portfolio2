@@ -8,8 +8,15 @@ import Sociate from '../assets/Sociate.png'
 import StreamVid from '../assets/StreamVid.png'
 import Facebook from '../assets/Facebook.png'
 import Ecommerce from '../assets/Ecommerce.png'
+import Youanimate from '../assets/Youanimate.png'
 
 export const buildsSoFar = [
+    {
+        name: "YouAnimate",
+        description: "A solo-built SaaS that turns a script into a narrated, captioned cardboard-animation video",
+        stack: "TypeScript · Next.js · Express · PostgreSQL · Prisma · OpenAI · Gemini · FFmpeg · Sentry · Dodo Payments · GCP",
+        url: "https://www.youanimate.xyz/",
+    },
     {
         name: "Vend-AI",
         description: "AI-powered customer support platform with live chat, agent routing, and analytics",
@@ -175,6 +182,14 @@ export const buildsSoFar = [
 ]
 
 export const projects = [
+    {
+        id: 0,
+        image: Youanimate,
+        title: "YouAnimate",
+        description: "Paste a script and get a finished cardboard-animation explainer video.",
+        tags: ["TypeScript", "Next.js", "Express", "PostgreSQL", "Prisma", "OpenAI", "Gemini", "FFmpeg", "Sentry", "Dodo Payments", "GCP"],
+        link: "https://www.youanimate.xyz/",
+    },
     {
         id: 1,
         image: Vendai,
