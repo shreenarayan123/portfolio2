@@ -133,7 +133,7 @@ export default function Hero() {
         <motion.div variants={item} className="relative hidden md:block">
           <div className="relative overflow-hidden rounded-[1.8rem] border border-white/10">
             <Image
-              src="/images/me2.png"
+              src="/images/me2.jpeg"
               alt="Shreenarayan"
               width={330}
               height={380}
